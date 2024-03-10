@@ -10,6 +10,7 @@ public class MyClass {
     }
 
     // protected members can be accessed only from this class or derived classes
+    // Protected members can be accessed by the defining class or any subclass, while private members can only be accessed by the defining class.
     protected void Func2() {
         Console.WriteLine("This is Func2");
         SomeValue -= 1;
@@ -31,5 +32,6 @@ public class DerivedClass : MyClass {
     public void Func3() {
         Console.WriteLine("This is Func3");
         // TODO: Func2 can be accessed because this is a subclass of MyClass
+        base.Func2(); // base is used to call the parent class. 
     }
 }
