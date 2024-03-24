@@ -3,7 +3,7 @@
 
 public class Book {
     // Declare some private fields
-    private string _ISBN = "";
+    private readonly string _ISBN = "";
     private string _title = "";
     private string _author = "";
 
