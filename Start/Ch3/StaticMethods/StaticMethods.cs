@@ -12,6 +12,16 @@ public class Temperature {
 
     // TODO: static methods use the 'static' modifier in their declaration
 
+    // Convert Farent to Celsius. 
+    public static double FtoC(double Ftemp){
+        double CTemp = (Ftemp-32.0)*5.0/9.0;
+        return CTemp; 
+    }
+
+    public static double CtoF(double CTemp){
+        double FTemp = (CTemp*9.0/5.0) + 32.0; 
+        return FTemp; 
+    }
     // Regular property implementation
     public double Temp { get; set; }
 
@@ -20,6 +30,9 @@ public class Temperature {
         return Temp >= ROOM_TEMP_LOWER_C && Temp <= ROOM_TEMP_UPPER_C;
     }
 
+    public static bool IsRoomTemp(double Temp) {
+        return Temp >= ROOM_TEMP_LOWER_C && Temp <= ROOM_TEMP_UPPER_C;
+    }
     // This does not work - will cause a compile error
     // public bool IsRoomTemp {
     //     get => Temp >= ROOM_TEMP_LOWER_C && Temp <= ROOM_TEMP_UPPER_C;

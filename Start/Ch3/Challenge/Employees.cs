@@ -11,6 +11,22 @@ public class Employee {
     public virtual void AdjustPay(decimal percentage) {}
 
     public override string ToString() => $"{ID}:{FullName}, {Department} ";
+
+    public static int empCount =0; 
+    protected static int IDStart; 
+
+    static Employee(){
+        IDStart = 1000;
+    }
+
+    public Employee()
+    {
+        Employee.empCount++ ; 
+        ID = Employee.IDStart++; 
+    }
+
+    public static int EmployeeCount { get => empCount;}
+
 }
 
 public class HourlyEmployee : Employee {
