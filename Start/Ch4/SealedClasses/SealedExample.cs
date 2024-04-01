@@ -1,7 +1,7 @@
 // Example file for Advanced C#: Object Oriented Programming by Joe Marini
 // Sealed classes and members
 
-// Example 1: Sealing a class
+// Example 1: Sealing a class, then it is not able to be derivated anymore
 public class A {
     public A() {
         Console.WriteLine("A");
@@ -26,13 +26,13 @@ public class B : A {
 public class C {
     public C() {}
 
-    public virtual void Func2() {}
+    public  virtual void Func2() {}
 }
 
 public class D : C {
     public D() {}
 
-    public override void Func2() {}
+    public sealed  override void Func2() {}
 }
 
 public class E : D {

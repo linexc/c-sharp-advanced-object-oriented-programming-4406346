@@ -11,7 +11,7 @@ public class Vehicle
         init;
     }
 
-    public string? Make {
+    public string? Marke {
         get;
         init;
     }
@@ -21,7 +21,7 @@ public class Vehicle
     }
 
     public override string ToString() {
-        return $"{GetType()}: {Make} {Model}";
+        return $"{GetType()}: {Marke} {Model}";
     }
 }
 
